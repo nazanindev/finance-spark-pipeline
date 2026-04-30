@@ -1,0 +1,14 @@
+data/real/
+*.csv
+!data/sample/*.csv
+delta_tables/
+__delta_log__/
+checkpoints/
+.env
+databricks.cfg
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+*.egg-info/
+dist/
