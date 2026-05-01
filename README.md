@@ -88,13 +88,15 @@ build_gold(spark, cfg.silver_path, cfg.gold_path)
 ├── data/
 │   ├── sample/             # synthetic Chase CSVs (committed, safe to share)
 │   └── real/               # gitignored — place real exports here
+├── .github/workflows/ci.yml   # pytest on every push/PR (Python 3.11 + Java 11)
 ├── notebooks/
 │   ├── 00_setup_environment.py
 │   ├── 01_bronze_ingest.py
 │   ├── 02_silver_transform.py
 │   ├── 03_gold_aggregations.py
 │   ├── 04_streaming_demo.py   # checkpoint exactly-once semantics
-│   └── 05_spark_internals.py  # BroadcastHashJoin, ZORDER, caching, partitioning
+│   ├── 05_spark_internals.py  # BroadcastHashJoin, ZORDER, caching, partitioning
+│   └── 06_dashboard.py        # matplotlib charts from Gold tables
 ├── scripts/
 │   └── generate_sample_data.py
 ├── src/
