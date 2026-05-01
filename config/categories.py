@@ -52,7 +52,7 @@ SEED_MERCHANT_RULES = [
 
 
 def _normalize_text(value: str) -> str:
-    value = html.unescape(str(value or ""))
-    value = value.upper()
+    value = str(value or "").upper()
+    value = re.sub(r"[\x27‘’`]", "", value)  # remove apostrophes before spacing
     value = re.sub(r"[^A-Z0-9]+", " ", value)
     return re.sub(r"\s+", " ", value).strip()
