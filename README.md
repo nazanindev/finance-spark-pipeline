@@ -2,7 +2,7 @@
 
 A Databricks Community Edition / local PySpark personal finance pipeline that turns raw Chase credit card CSV exports into a medallion-architecture Delta Lake pipeline.
 
-Showcases: Delta Lake ACID, medallion design, Structured Streaming, and Spark internals — built as a portfolio piece for data platform interviews.
+> **Intentionally overengineered.** The data is a few thousand rows of personal credit card transactions — pandas would be faster and simpler. The point is to practice Spark, Delta Lake, and medallion architecture patterns at a scale where mistakes are cheap, before applying them where they actually matter.
 
 ---
 
@@ -32,7 +32,6 @@ Chase CSV exports
 ## Local Setup
 
 > **Critical**: `delta-spark` version must match `pyspark`. PySpark 3.5.x requires `delta-spark==3.1.x`.
-> This is the #1 local setup failure point — using mismatched versions produces cryptic JVM errors.
 
 ```bash
 python3 -m venv .venv
