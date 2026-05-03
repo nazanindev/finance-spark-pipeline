@@ -1,6 +1,6 @@
 # finance-spark-pipeline
 
-A Databricks Community Edition / local PySpark personal finance pipeline that turns raw Chase credit card CSV exports into a medallion-architecture Delta Lake pipeline.
+PySpark personal finance pipeline that turns raw Chase credit card CSV exports into a medallion-architecture Delta Lake pipeline.
 
 > **Intentionally overengineered.** The data is a few thousand rows of personal credit card transactions — pandas would be faster and simpler. The point is to practice Spark, Delta Lake, and medallion architecture patterns at a scale where mistakes are cheap, before applying them where they actually matter.
 
